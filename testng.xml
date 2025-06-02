@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Loan Department">
-  <test thread-count="5" name="Personal Loan">
-    <classes>
-      <class name="test.Day1"/>
-      <class name="test.Day2"/>
-    </classes>
-  </test> <!-- Test -->
-  <test thread-count="5" name="Car Loan">
-    <classes>
-      <class name="test.Day3">
-         <methods>
-         <include name='MobileLoginCar' />
-         </methods>
-       </class>
-    </classes>
-  </test>
-  <test thread-count="5" name="Home Loan">
-    <classes>
-      <class name="test.Day4">
-      <methods>
-       <exclude name='MobileLoginHome' />
-      </methods>
-      </class>
-    </classes>
-  </test>
-</suite> <!-- Suite -->
+	<parameter name="URL" value="www.google.com" />
+	<test thread-count="5" name="Personal Loan">
+	<parameter name="URL" value=">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" />
+		<classes>
+			<class name="test.Day1" />
+			<class name="test.Day2" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="5" name="Car Loan">
+		<classes>
+			<class name="test.Day3">
+				<methods>
+					<include name='MobileLoginCar' />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	<test thread-count="5" name="Home Loan">
+		<classes>
+			<class name="test.Day4">
+				<methods>
+					<exclude name='Mobile.*' />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> <!--
+Suite -->

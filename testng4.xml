@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Annotations Extension">
+<listeners>
+<listener class-name="test.Listeners" />
+</listeners>
+	<test thread-count="5" name="Regression_Test">
+	<parameter name="username" value="Shahil" />
+	<parameter name="password" value="Sinha" />
+		<classes>
+			<class name="test.Day5" />
+			<class name="test.Day6" />
+		</classes>
+	</test>
+</suite> <!--
+Suite -->

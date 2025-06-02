@@ -1,5 +1,6 @@
 package test;
 
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class Day3 {
@@ -9,14 +10,16 @@ public class Day3 {
 		System.out.println("Web Login Car");
 	}
 	
+	@Parameters({ "URL" })
 	@Test
-	public void MobileLoginCar () {
+	public void MobileLoginCar (String urlName) {
 		System.out.println("Mobile Login Car");
+		System.out.println("Day 3 "+urlName);
 	}
 	
-	@Test
+	@Test(groups = {"Smoke"}, dependsOnMethods = {"WebLoginCar"} )
 	public void APILoginCar () {
-		System.out.println("API Login Car");
+		System.out.println("Smoke: API Login Car");
 	}
 
 }
